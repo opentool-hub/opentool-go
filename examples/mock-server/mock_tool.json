@@ -1,0 +1,42 @@
+{
+  "opentool": "1.0.0",
+  "info": {
+    "title": "Go OpenTool example",
+    "version": "latest",
+    "description": "Example service for the OpenTool Go server SDK."
+  },
+  "functions": [
+    {
+      "name": "echo",
+      "description": "Return the supplied message.",
+      "parameters": [
+        {
+          "name": "message",
+          "schema": { "type": "string" },
+          "required": true
+        }
+      ],
+      "return": {
+        "name": "EchoResult",
+        "schema": { "type": "object" }
+      }
+    },
+    {
+      "name": "countdown",
+      "description": "Stream a countdown from the supplied integer.",
+      "parameters": [
+        {
+          "name": "from",
+          "schema": { "type": "integer" },
+          "required": true
+        }
+      ],
+      "returns": {
+        "data": {
+          "name": "CountdownItem",
+          "schema": { "type": "object" }
+        }
+      }
+    }
+  ]
+}
